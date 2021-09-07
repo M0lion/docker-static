@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker-static
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      docker-static: web
+  template:
+    metadata:
+      labels:
+        docker-static: web
+    spec:
+      containers:
+      - name: docker-static-pod
+        image: bulletinboard:1.0
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: docker-static-service
+  namespace: default
+spec:
+  type: NodePort
+  selector:
+    docker-static: web
+  ports:
+  - port: 8080
+    targetPort: 8080
+    nodePort: 90
