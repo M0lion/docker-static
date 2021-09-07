@@ -15,7 +15,9 @@ spec:
     spec:
       containers:
       - name: docker-static-pod
-        image: bulletinboard:1.0
+        image: docker.pkg.github.com/M0lion/docker-static/docker-static:main
+      imagePullSecrets:
+      - name: dockerconfigjson-github-com
 ---
 apiVersion: v1
 kind: Service
