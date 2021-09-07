@@ -22,7 +22,7 @@ ADD web /var/www/html/
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
 # Expose ports
-EXPOSE 90
+EXPOSE 30000
 
 # Set the default command to execute
 # when creating a new container
