@@ -1,7 +1,7 @@
 #
 # BudgetTracker Dockerfile for UI
 #
-FROM arm64v7/node
+FROM arm32v7/node
 
 USER root
 
