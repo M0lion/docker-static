@@ -1,8 +1,7 @@
 #
 # BudgetTracker Dockerfile for UI
 #
-FROM ubuntu:latest
-MAINTAINER Arunkumar Srisailapathi "sail.arunkumar@gmail.com"
+FROM arm32v7/node
 
 USER root
 
