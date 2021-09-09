@@ -5,6 +5,10 @@ FROM arm32v7/node
 
 USER root
 
+WORKDIR work
+
+ADD web web
+
 RUN npm install -g http-server
 
 # Expose ports
